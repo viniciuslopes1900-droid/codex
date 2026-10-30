@@ -771,6 +771,13 @@
     "ComputerUseWindowsConfigToml": {
       "additionalProperties": false,
       "properties": {
+        "always_allowed_app_ids": {
+          "additionalProperties": {
+            "type": "boolean"
+          },
+          "description": "Decisions saved by the Desktop Computer Use UI; managed policy is separate.",
+          "type": "object"
+        },
         "aumids": {
           "additionalProperties": {
             "$ref": "#/definitions/AllowDenyRequirementToml"
