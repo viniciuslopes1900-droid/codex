@@ -21,6 +21,8 @@ pub struct ComputerUseMacosConfigToml {
 #[derive(Serialize, Deserialize, Debug, Clone, Default, PartialEq, Eq, JsonSchema)]
 #[schemars(deny_unknown_fields)]
 pub struct ComputerUseWindowsConfigToml {
+    /// Decisions saved by the Desktop Computer Use UI; managed policy is separate.
+    pub always_allowed_app_ids: Option<BTreeMap<String, bool>>,
     pub aumids: Option<BTreeMap<String, AllowDenyRequirementToml>>,
     pub exes: Option<Vec<ComputerUseWindowsExeConfigToml>>,
 }
